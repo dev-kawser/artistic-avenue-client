@@ -11,7 +11,7 @@ const ArtWork = () => {
                     <div className="grid gap-6 my-16 lg:grid-cols-3">
                         <div className="flex flex-col p-8 space-y-4 rounded-md dark:bg-gray-50">
                             <div>
-                                <img className="w-64" src="https://i.ibb.co/p4VsYMc/Landscape-Painting.webp" alt="" />
+                                <img className="w-64 h-[270px]" src="https://i.ibb.co/p4VsYMc/Landscape-Painting.webp" alt="" />
                             </div>
                             <p className="text-2xl font-semibold">
                                 <b>Landscape Painting.</b>
