@@ -1,7 +1,11 @@
+import { useContext } from "react";
+import { AuthContext } from "../../Context/ContextProvider";
 
 
 const AddCraftItem = () => {
 
+    const { user } = useContext(AuthContext)
+    console.log(user);
 
     const handleAddItem = e => {
         e.preventDefault();
@@ -13,14 +17,16 @@ const AddCraftItem = () => {
         const rating = form.rating.value;
         const customization_example = form.customization.value;
         const processing_time = form.processing.value;
-        const user_name = form.username.value;
-        const user_email = form.email.value;
+        const user_name = user.displayName;
+        const user_email = user.email;
         const stock_status = form.stock.value;
         const image_url = form.image.value;
 
         const addItemInfo = { item_name, subcategory_Name, short_description, price, rating, customization_example, processing_time, user_email, user_name, stock_status, image_url };
         console.log(addItemInfo);
     }
+
+
     return (
         <div>
             <section className="p-6 text-gray-900 mt-10">
@@ -41,11 +47,11 @@ const AddCraftItem = () => {
                             </div>
                             <div className="col-span-full sm:col-span-3">
                                 <label htmlFor="email" className="text-sm">User Name</label>
-                                <input name="username" id="email" type="email" placeholder="User Name" className="w-full rounded-md  focus:ring focus:ring-opacity-75 text-black focus:ring-violet-600 border-gray-300 outline-slate-200 outline" />
+                                <input name="username" disabled id="email" type="email" placeholder="User Name" className="w-full rounded-md  focus:ring focus:ring-opacity-75 text-black focus:ring-violet-600 border-gray-300 outline-slate-200 outline" />
                             </div>
                             <div className="col-span-full sm:col-span-3">
                                 <label htmlFor="email" className="text-sm">User Email</label>
-                                <input name="email" id="email" type="email" placeholder="user Email" className="w-full rounded-md  focus:ring focus:ring-opacity-75 text-black focus:ring-violet-600 border-gray-300 outline-slate-200 outline" />
+                                <input name="email" disabled id="email" type="email" placeholder="user Email" className="w-full rounded-md  focus:ring focus:ring-opacity-75 text-black focus:ring-violet-600 border-gray-300 outline-slate-200 outline" />
                             </div>
                             <div className="col-span-full">
                                 <label htmlFor="address" className="text-sm">Short Description</label>

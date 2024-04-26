@@ -28,7 +28,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="bg-yellow-300 py-4 fira-sans">
+        <div className="shadow-xl py-4 fira-sans">
             <div className="navbar bg-transparent container mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown z-10">
