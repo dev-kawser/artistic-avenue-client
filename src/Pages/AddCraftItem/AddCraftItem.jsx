@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Context/ContextProvider";
 import { FaArrowRight } from "react-icons/fa6";
+import Swal from 'sweetalert2'
 
 
 const AddCraftItem = () => {
@@ -25,6 +26,26 @@ const AddCraftItem = () => {
 
         const addItemInfo = { item_name, subcategory_Name, short_description, price, rating, customization_example, processing_time, user_email, user_name, stock_status, image_url };
         console.log(addItemInfo);
+
+        fetch('http://localhost:5000/newItem', {
+            method: "POST",
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(addItemInfo)
+
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Do you want to continue',
+                        icon: 'success',
+                        confirmButtonText: 'Next'
+                    })
+                }
+            })
     }
 
 
@@ -87,7 +108,7 @@ const AddCraftItem = () => {
                             </div>
                             <div className="lg:hidden flex">
                                 <button type="submit" className="btn btn-circle btn-outline">
-                                <FaArrowRight />
+                                    <FaArrowRight />
                                 </button>
                             </div>
                         </div>
