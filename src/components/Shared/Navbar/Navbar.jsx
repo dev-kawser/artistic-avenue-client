@@ -96,8 +96,8 @@ const Navbar = () => {
                             <button onClick={() => LogOut()} type="button" className="px-8 py-3 font-semibold rounded dark:bg-gray-800 dark:text-gray-100 hover:scale-105">Logout</button>
                             </div>
                         </div> : <div className="mr-2 flex gap-2">
-                            <Link to="/login"><button type="button" className="px-8 py-3 font-semibold rounded dark:bg-gray-800 dark:text-gray-100 hover:scale-105">Login</button></Link>
-                            <Link to="/register"><button type="button" className="px-8 py-3 font-semibold border rounded dark:border-gray-800 dark:text-gray-800 lg:flex hidden hover:scale-105">Register</button></Link>
+                            <Link to="/login"><button type="button" className="px-8 py-3 font-semibold rounded dark:bg-gray-800 dark:text-gray-100 hover:scale-105 transition-all">Login</button></Link>
+                            <Link to="/register"><button type="button" className="px-8 py-3 font-semibold border rounded dark:border-gray-800 dark:text-gray-800 lg:flex hidden hover:scale-105 transition-all">Register</button></Link>
                         </div>
                     }
                 </div>

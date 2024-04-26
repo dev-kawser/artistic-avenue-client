@@ -11,7 +11,7 @@ const ArtWork = () => {
                     <div className="grid gap-6 my-16 lg:grid-cols-3">
                         <div className="flex flex-col p-8 space-y-4 rounded-md dark:bg-gray-50">
                             <div>
-                                <img className="w-64 h-[270px]" src="https://i.ibb.co/p4VsYMc/Landscape-Painting.webp" alt="" />
+                                <img className="w-64 h-[270px] hover:scale-105 transition-all border border-black" src="https://i.ibb.co/p4VsYMc/Landscape-Painting.webp" alt="" />
                             </div>
                             <p className="text-2xl font-semibold">
                                 <b>Landscape Painting.</b>
@@ -20,7 +20,7 @@ const ArtWork = () => {
                         </div>
                         <div className="flex flex-col p-8 space-y-4 rounded-md dark:bg-gray-50">
                             <div>
-                                <img className="w-64" src="https://i.ibb.co/Yt4BQ4c/Portrait-Drawing.jpg" alt="" />
+                                <img className="w-64 hover:scale-105 transition-all border border-black" src="https://i.ibb.co/Yt4BQ4c/Portrait-Drawing.jpg" alt="" />
                             </div>
                             <p className="text-2xl font-semibold">
                                 <b>Portrait Drawing.</b>Portrait drawing captures the likeness and personality of individuals through skilled observation and rendering of facial features and expressions.
@@ -28,7 +28,7 @@ const ArtWork = () => {
                         </div>
                         <div className="flex flex-col p-8 space-y-4 rounded-md dark:bg-gray-50">
                             <div>
-                                <img className="w-64" src="https://i.ibb.co/XjZ9NzX/Cartoon-Drawing.jpg" alt="" />
+                                <img className="w-64 hover:scale-105 transition-all border border-black" src="https://i.ibb.co/XjZ9NzX/Cartoon-Drawing.jpg" alt="" />
                             </div>
                             <p className="text-2xl font-semibold">
                                 <b>Cartoon Drawing.</b>Cartoon drawing simplifies and exaggerates features to create humorous or satirical representations in a playful and engaging style.

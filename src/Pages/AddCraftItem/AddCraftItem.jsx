@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Context/ContextProvider";
+import { FaArrowRight } from "react-icons/fa6";
 
 
 const AddCraftItem = () => {
@@ -31,7 +32,7 @@ const AddCraftItem = () => {
         <div>
             <section className="p-6 text-gray-900 mt-10">
                 <form onSubmit={handleAddItem} noValidate="" action="" className="container flex flex-col mx-auto space-y-12">
-                    <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm bg-gray-50">
+                    <fieldset className="grid grid-cols-4 gap-6 p-10 rounded-md shadow-sm bg-gray-100">
                         <div className="space-y-2 col-span-full lg:col-span-1">
                             <p className="font-medium">Personal Inormation</p>
                             <p className="text-xs">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci fuga autem eum!</p>
@@ -81,8 +82,16 @@ const AddCraftItem = () => {
                                 <label htmlFor="zip" className="text-sm">Image</label>
                                 <input name="image" id="zip" type="text" placeholder="Image url" className="w-full rounded-md focus:ring  focus:ring-opacity-75 text-black focus:ring-violet-600 border-gray-300 outline-slate-200 outline" />
                             </div>
-                            <button type="submit" className="px-8 py-3 font-semibold rounded bg-gray-800 text-gray-100 hover:scale-105">Add Item</button>
+                            <div className="lg:flex hidden">
+                                <button type="submit" className="px-8 py-3 font-semibold rounded dark:bg-gray-800 dark:text-gray-100 hover:scale-105 transition-all">Add Item</button>
+                            </div>
+                            <div className="lg:hidden flex">
+                                <button type="submit" className="btn btn-circle btn-outline">
+                                <FaArrowRight />
+                                </button>
+                            </div>
                         </div>
+
                     </fieldset>
                 </form>
             </section>
