@@ -78,33 +78,33 @@ const Login = () => {
 
     return (
         <div className="flex justify-center lg:h-[700px] items-center bg-gray-200">
-            <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800">
+            <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-50 text-gray-800">
                 <h1 className="text-2xl font-bold text-center">Login</h1>
                 <form onSubmit={handleSubmit(onSubmit)} noValidate="" action="" className="space-y-6">
                     <div className="space-y-1 text-sm">
-                        <label htmlFor="email" className="block dark:text-gray-600">Your Email</label>
-                        <input type="email" name="email" id="email" placeholder="Your Email" className="w-full outline-slate-300 outline px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" {...register("email", { required: true })} />
+                        <label htmlFor="email" className="block text-gray-600">Your Email</label>
+                        <input type="email" name="email" id="email" placeholder="Your Email" className="w-full outline-slate-300 outline px-4 py-3 rounded-md border-gray-300 bg-gray-50 text-gray-800 focus:border-violet-600" {...register("email", { required: true })} />
                         {errors.email && <small className="text-red-500 font-medium mt-1">This field is required</small>}
                     </div>
                     <div className="space-y-1 text-sm">
-                        <label htmlFor="password" className="block dark:text-gray-600">Password</label>
-                        <input type="password" name="password" id="password" placeholder="Password" className="w-full outline-slate-300 outline px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" {...register("password", { required: true })} />
+                        <label htmlFor="password" className="block text-gray-600">Password</label>
+                        <input type="password" name="password" id="password" placeholder="Password" className="w-full outline-slate-300 outline px-4 py-3 rounded-md border-gray-300 bg-gray-50 text-gray-800 focus:border-violet-600" {...register("password", { required: true })} />
                         {errors.password && <small className="text-red-500 font-medium mt-1">This field is required</small>}
                         <div>
                             {
                                 error && <small className="text-red-500 font-medium mt-1">{error}</small>
                             }
                         </div>
-                        <div className="flex justify-end text-xs dark:text-gray-600">
+                        <div className="flex justify-end text-xs text-gray-600">
                             <a rel="noopener noreferrer" href="#">Forgot Password?</a>
                         </div>
                     </div>
-                    <button className="block w-full p-3 text-center rounded-sm dark:text-gray-50 hover:bg-violet-800 dark:bg-violet-600">Sign in</button>
+                    <button className="block w-full p-3 text-center rounded-sm text-gray-50 hover:bg-violet-800 bg-violet-600">Sign in</button>
                 </form>
                 <div className="flex items-center pt-4 space-x-1">
-                    <div className="flex-1 h-px sm:w-16 dark:bg-gray-300"></div>
-                    <p className="px-3 text-sm dark:text-gray-600">Login with social accounts</p>
-                    <div className="flex-1 h-px sm:w-16 dark:bg-gray-300"></div>
+                    <div className="flex-1 h-px sm:w-16 bg-gray-300"></div>
+                    <p className="px-3 text-sm text-gray-600">Login with social accounts</p>
+                    <div className="flex-1 h-px sm:w-16 bg-gray-300"></div>
                 </div>
                 <div className="flex justify-center space-x-4">
                     <button onClick={googleHandle} aria-label="Log in with Google" className="p-3 rounded-sm">
@@ -119,7 +119,7 @@ const Login = () => {
                         </svg>
                     </button>
                 </div>
-                <p className="text-xs text-center sm:px-6 dark:text-gray-600">Do not have an account?
+                <p className="text-xs text-center sm:px-6 text-gray-600">Do not have an account?
                     <Link to="/register" rel="noopener noreferrer" className="underline text-primary ml-1 font-medium">Register</Link>
                 </p>
             </div>

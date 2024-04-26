@@ -17,18 +17,14 @@ const Navbar = () => {
     }, [theme]);
 
     const handleToggle = () => {
-        setTheme((prevTheme) => (prevTheme === "light" ? "night" : "light"));
+        setTheme((prevTheme) => (prevTheme === "light" ? "synthwave" : "light"));
     };
 
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/all-art-craft">All Art & craft Items</NavLink></li>
-        {
-            user ? <>
-                <li><NavLink to="/update-profile">Update Profile</NavLink></li>
-                <li><NavLink to="/update-profile">Update Profile</NavLink></li>
-            </> : ""
-        }
+        <li><NavLink to="/add-craft-item">Add Craft Item</NavLink></li>
+        <li><NavLink to="/my-art-and-craft-list">My Art & Craft List</NavLink></li>
     </>
 
     return (
@@ -43,24 +39,20 @@ const Navbar = () => {
                             {links}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-3xl">daisyUI</a>
+                    <Link to="/" className="btn btn-ghost text-3xl text-black">daisyUI</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu flex gap-3 menu-horizontal px-3 text-lg font-semibold">
+                    <ul className="menu flex gap-3 menu-horizontal px-3 text-lg font-semibold text-black">
                         {links}
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    {/* <Link to="login" className="btn btn-outline btn-primary mr-2 text-base">Login</Link>
-                    <Link to="register" className="btn btn-outline btn-secondary text-base">Register</Link>
-                    <button onClick={() => LogOut()} className="btn btn-outline btn-secondary text-base">Logout</button> */}
 
-                    
                     <label className="cursor-pointer grid place-items-center">
                         <input
                             onChange={handleToggle}
                             type="checkbox"
-                            checked={theme === "night"}
+                            checked={theme === "synthwave"}
                             className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2"
                         />
                         <svg
@@ -104,8 +96,8 @@ const Navbar = () => {
                                 <button className="lg:btn lg:btn-outline mr-5 btn-sm bg-blue-500 text-white lg:font-bold" onClick={() => LogOut()}>Log Out</button>
                             </div>
                         </div> : <div>
-                            <Link to="/login"><button className="btn btn-link lg:btn-outline font-bold">Login</button></Link>
-                            <Link to="/register"><button className="btn btn-link lg:btn-outline font-bold">Register</button></Link>
+                            <Link to="/login"><button className="btn btn-link lg:btn-outline font-bold text-black">Login</button></Link>
+                            <Link to="/register"><button className="btn btn-link lg:btn-outline font-bold text-black">Register</button></Link>
                         </div>
                     }
                 </div>
