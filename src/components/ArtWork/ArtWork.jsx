@@ -35,6 +35,9 @@ const ArtWork = () => {
                             </p>
                         </div>
                     </div>
+                    <div className="flex justify-end">
+                    <button className="btn btn-secondary -my-4 mb-2 mr-5">View More</button>
+                    </div>
                 </div>
             </section>
         </div>
