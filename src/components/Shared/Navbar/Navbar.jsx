@@ -17,7 +17,7 @@ const Navbar = () => {
     }, [theme]);
 
     const handleToggle = () => {
-        setTheme((prevTheme) => (prevTheme === "light" ? "synthwave" : "light"));
+        setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
     };
 
     const links = <>
@@ -28,7 +28,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="shadow-xl py-4 fira-sans">
+        <div className="shadow-xl bg-white py-4 fira-sans">
             <div className="navbar bg-transparent container mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown z-10">
@@ -52,7 +52,7 @@ const Navbar = () => {
                         <input
                             onChange={handleToggle}
                             type="checkbox"
-                            checked={theme === "synthwave"}
+                            checked={theme === "dark"}
                             className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2"
                         />
                         <svg

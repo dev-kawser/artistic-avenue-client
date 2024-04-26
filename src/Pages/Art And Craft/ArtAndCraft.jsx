@@ -1,9 +1,13 @@
+import { useLoaderData } from "react-router-dom";
 
 
 const ArtAndCraft = () => {
+
+    const allArt = useLoaderData()
+
     return (
         <div>
-            <h1>jjsajs</h1>
+            <h1>{allArt.length}</h1>
         </div>
     );
 };

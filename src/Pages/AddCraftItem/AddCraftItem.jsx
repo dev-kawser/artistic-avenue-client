@@ -7,7 +7,6 @@ import Swal from 'sweetalert2'
 const AddCraftItem = () => {
 
     const { user } = useContext(AuthContext)
-    console.log(user);
 
     const handleAddItem = e => {
         e.preventDefault();
@@ -101,7 +100,7 @@ const AddCraftItem = () => {
                             </div>
                             <div className="col-span-full sm:col-span-2">
                                 <label htmlFor="zip" className="text-sm">Image</label>
-                                <input name="image" id="zip" type="text" placeholder="Image url" className="w-full rounded-md focus:ring  focus:ring-opacity-75 text-black focus:ring-violet-600 border-gray-300 outline-slate-200 outline" />
+                                <input name="image" id="zip" type="url" placeholder="Image url" className="w-full rounded-md focus:ring  focus:ring-opacity-75 text-black focus:ring-violet-600 border-gray-300 outline-slate-200 outline" />
                             </div>
                             <div className="lg:flex hidden">
                                 <button type="submit" className="px-8 py-3 font-semibold rounded dark:bg-gray-800 dark:text-gray-100 hover:scale-105 transition-all">Add Item</button>
