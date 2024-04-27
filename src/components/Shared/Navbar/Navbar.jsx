@@ -92,7 +92,7 @@ const Navbar = () => {
                         user ? <div className="flex items-center gap-2">
                             <div
                                 data-tooltip-id="my-tooltip"
-                                data-tooltip-content={user.email}
+                                data-tooltip-content={user.displayName}
                                 data-tooltip-place="top"
                                 className=" lg:flex hidden hover:scale-110 border-2 lg:p-1 border-blue-300">
                                 <img className="w-10" alt="NF" src={user ? user?.photoURL : "https://i.ibb.co/vj2yqYj/pp.jpg"} />
