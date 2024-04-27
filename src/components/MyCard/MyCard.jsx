@@ -1,11 +1,42 @@
 /* eslint-disable react/prop-types */
 
+import Swal from "sweetalert2";
+
 
 const MyCard = ({ item }) => {
 
-    console.log(item);
 
-    const { item_name, price, rating, customization_example, stock_status, image_url } = item;
+    const { _id, item_name, price, rating, customization_example, stock_status, image_url } = item;
+
+    const handleDelete = _id => {
+
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/artItem/${_id}`, {
+                    method: "DELETE"
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        if (data.deletedCount > 0) {
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your Art Collection has been deleted.",
+                                icon: "success"
+                            });
+                        }
+                    })
+            }
+        });
+    }
 
 
     return (
@@ -26,7 +57,7 @@ const MyCard = ({ item }) => {
                 </div>
                 <div className="card-actions justify-end mt-5">
                     <button type="button" className="px-8 py-3 font-semibold border rounded dark:border-gray-800 dark:text-gray-800 lg:flex hidden hover:scale-105 transition-all">Update</button>
-                    <button type="button" className="px-8 py-3 font-semibold rounded dark:bg-red-600 dark:text-gray-100 hover:scale-105 transition-all">Delete</button>
+                    <button onClick={() => handleDelete(_id)} type="button" className="px-8 py-3 font-semibold rounded dark:bg-red-600 dark:text-gray-100 hover:scale-105 transition-all">Delete</button>
                 </div>
             </div>
         </div>
