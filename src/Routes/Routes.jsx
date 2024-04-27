@@ -9,6 +9,7 @@ import AddCraftItem from "../Pages/AddCraftItem/AddCraftItem";
 import MyArtAndCraft from "../Pages/MyArtAndCraft/MyArtAndCraft";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import DetailsItem from "../components/DetailsItem/DetailsItem";
+import UpdateArt from "../Pages/UpdateArt/UpdateArt";
 
 
 
@@ -32,6 +33,13 @@ const router = createBrowserRouter([
                 path: "/artItem/:id",
                 element: <ProtectedRoute>
                     <DetailsItem></DetailsItem>
+                </ProtectedRoute>,
+                loader: ({ params }) => fetch(`http://localhost:5000/artItem/${params.id}`)
+            },
+            {
+                path: "/updateArt/:id",
+                element: <ProtectedRoute>
+                    <UpdateArt></UpdateArt>
                 </ProtectedRoute>,
                 loader: ({ params }) => fetch(`http://localhost:5000/artItem/${params.id}`)
             },
