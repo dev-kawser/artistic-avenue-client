@@ -7,7 +7,7 @@ const ArtWork = () => {
                 <div className="container mx-auto">
                     <span className="block mb-2 text-xs font-medium tracking-widest text-center uppercase dark:text-violet-600">
                         Art is the journey of a free soul. - Alev Oguz</span>
-                    <h2 className="text-5xl font-bold text-center fira-sans dark:text-gray-900">Our Simple Art Works</h2>
+                    <h2 className="text-5xl font-bold text-center fira-sans dark:text-gray-900">Our Popular Art Works</h2>
                     <div className="grid gap-6 my-16 lg:grid-cols-3">
                         <div className="flex flex-col p-8 space-y-4 rounded-md dark:bg-gray-50">
                             <div>
