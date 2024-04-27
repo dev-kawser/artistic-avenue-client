@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
 
+import { Link } from "react-router-dom";
+
 
 const TBody = ({ art }) => {
 
@@ -25,7 +27,11 @@ const TBody = ({ art }) => {
                 </td>
                 <td className="p-3 text-right">
                     <span className="px-3 py-1 font-semibold rounded-md dark:bg-violet-600 dark:text-gray-50">
-                        <span><button>Details</button></span>
+                        <span>
+                            <Link to={`/artItem/${art._id}`}>
+                                <button>Details</button>
+                            </Link>
+                        </span>
                     </span>
                 </td>
             </tr>
