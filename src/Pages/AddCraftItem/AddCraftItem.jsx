@@ -86,10 +86,16 @@ const AddCraftItem = () => {
                                 <label htmlFor="state" className="text-sm">Rating</label>
                                 <input name="rating" id="state" type="text" placeholder="Rating" className="w-full rounded-md focus:ring  focus:ring-opacity-75 text-black focus:ring-violet-600 border-gray-300 outline-slate-200 outline" />
                             </div>
-                            <div className="col-span-full sm:col-span-2">
-                                <label htmlFor="zip" className="text-sm">Customization</label>
-                                <input name="customization" id="zip" type="text" placeholder="Yes/ No" className="w-full rounded-md focus:ring  focus:ring-opacity-75 text-black focus:ring-violet-600 border-gray-300 outline-slate-200 outline" />
+
+                            <div className="flex flex-col">
+                                <label htmlFor="state" className="text-sm">Customization</label>
+                                <select name="" id="" className="outline-slate-200 outline">
+                                    <option value="" className="p-1">Select</option>
+                                    <option value="yes" className="p-1">Yes</option>
+                                    <option value="no" className="p-1">No</option>
+                                </select>
                             </div>
+
                             <div className="col-span-full sm:col-span-2">
                                 <label htmlFor="zip" className="text-sm">Processing Time</label>
                                 <input name="processing" id="zip" type="text" placeholder="Processing Time" className="w-full rounded-md focus:ring  focus:ring-opacity-75 text-black focus:ring-violet-600 border-gray-300 outline-slate-200 outline" />
