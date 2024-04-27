@@ -43,6 +43,7 @@ const AddCraftItem = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.insertedId) {
+                    form.reset();
                     Swal.fire({
                         title: 'Success!',
                         text: 'Data added successfully',
@@ -60,8 +61,7 @@ const AddCraftItem = () => {
                 <form onSubmit={handleAddItem} noValidate="" action="" className="container flex flex-col mx-auto space-y-12">
                     <fieldset className="grid grid-cols-4 gap-6 p-10 rounded-md shadow-sm bg-gray-100">
                         <div className="space-y-2 col-span-full lg:col-span-1">
-                            <p className="font-medium">Personal Inormation</p>
-                            <p className="text-xs">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci fuga autem eum!</p>
+                        <p className="font-medium text-gray-900 text-xl">Add Your Information</p>
                         </div>
                         <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3 text-black">
                             <div className="col-span-full sm:col-span-3">

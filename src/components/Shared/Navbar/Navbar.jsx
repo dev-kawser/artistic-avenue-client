@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../Context/ContextProvider";
+import { Tooltip } from "react-tooltip";
 
 
 
@@ -89,11 +90,15 @@ const Navbar = () => {
 
                     {
                         user ? <div className="flex items-center gap-2">
-                            <div data-tip={user.displayName} className="tooltip tooltip-bottom lg:flex hidden hover:scale-110 border-2 lg:p-1 border-blue-300">
-                                <img className="w-10" alt="NF" src={user ?user?.photoURL : "https://i.ibb.co/vj2yqYj/pp.jpg"} />
+                            <div
+                                data-tooltip-id="my-tooltip"
+                                data-tooltip-content={user.email}
+                                data-tooltip-place="top"
+                                className=" lg:flex hidden hover:scale-110 border-2 lg:p-1 border-blue-300">
+                                <img className="w-10" alt="NF" src={user ? user?.photoURL : "https://i.ibb.co/vj2yqYj/pp.jpg"} />
                             </div>
                             <div>
-                            <button onClick={() => LogOut()} type="button" className="px-8 py-3 font-semibold rounded dark:bg-gray-800 dark:text-gray-100 hover:scale-105">Logout</button>
+                                <button onClick={() => LogOut()} type="button" className="px-8 py-3 font-semibold rounded dark:bg-gray-800 dark:text-gray-100 hover:scale-105">Logout</button>
                             </div>
                         </div> : <div className="mr-2 flex gap-2">
                             <Link to="/login"><button type="button" className="px-8 py-3 font-semibold rounded dark:bg-gray-800 dark:text-gray-100 hover:scale-105 transition-all">Login</button></Link>
@@ -102,6 +107,7 @@ const Navbar = () => {
                     }
                 </div>
             </div>
+            <Tooltip id="my-tooltip" />
         </div>
     );
 };
