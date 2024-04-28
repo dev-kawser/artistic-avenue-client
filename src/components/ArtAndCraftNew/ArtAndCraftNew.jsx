@@ -7,7 +7,7 @@ const ArtAndCraftNew = () => {
     const [newData, setNewData] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/allItem')
+        fetch('https://art-and-craft-server-indol.vercel.app/allItem')
             .then(res => res.json())
             .then(data => {
                 setNewData(data);

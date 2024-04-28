@@ -47,7 +47,7 @@ const router = createBrowserRouter([
             {
                 path: "/artCategory/:subcategory_Name",
                 element: <ArtCraftCategory></ArtCraftCategory>,
-                loader: ({ params }) => fetch(`http://localhost:5000/artItem/${params.subcategory_Name}`)
+                loader: ({ params }) => fetch(`https://art-and-craft-server-indol.vercel.app/artItem/${params.subcategory_Name}`)
             },
             {
                 path: "/add-craft-item",
