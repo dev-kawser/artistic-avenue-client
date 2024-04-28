@@ -12,26 +12,40 @@ const MyArtAndCraft = () => {
             .then(res => res.json())
             .then(data => {
                 setMyItem(data);
-                setOriginalData(data); // Store original data
+                setOriginalData(data);
             });
     }, [user]);
 
     const filterByValue = (value) => {
         const filteredData = originalData.filter((item) => item.customization_example === value);
-        setMyItem(filteredData); // Update myItem with filtered data
+        setMyItem(filteredData);
     };
 
     const handleAllData = () => {
         setMyItem(originalData)
     }
 
+
     return (
         <>
-            <div className="flex justify-center items-center mt-10">
-                <button onClick={handleAllData}>Filter All</button>
-                <button onClick={() => filterByValue('yes')}>Filter Yes</button>
-                <button onClick={() => filterByValue('no')}>Filter No</button>
+
+            <div className="flex justify-center items-center">
+                <details className="dropdown mt-10">
+                    <summary className="m-1 btn btn-outline px-10">Filter</summary>
+                    <ul className="p-2 block shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+                        <li>
+                            <button onClick={handleAllData}>All</button>
+                        </li>
+                        <li>
+                            <button onClick={() => filterByValue('yes')}>Yes</button>
+                        </li>
+                        <li>
+                            <button onClick={() => filterByValue('no')}>No</button>
+                        </li>
+                    </ul>
+                </details>
             </div>
+
             <div className="grid grid-cols-1 lg:grid-cols-2 p-1 container mx-auto mt-10 gap-5">
                 {myItem.map(item => <MyCard key={item._id} item={item} />)}
             </div>
