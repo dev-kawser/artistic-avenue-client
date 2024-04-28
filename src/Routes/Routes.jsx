@@ -22,26 +22,26 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/newItem')
+                loader: () => fetch('https://art-and-craft-server-indol.vercel.app/newItem')
             },
             {
                 path: "/all-art-craft",
                 element: <ArtAndCraft></ArtAndCraft>,
-                loader: () => fetch('http://localhost:5000/newItem')
+                loader: () => fetch('https://art-and-craft-server-indol.vercel.app/newItem')
             },
             {
                 path: "/artItem/:id",
                 element: <ProtectedRoute>
                     <DetailsItem></DetailsItem>
                 </ProtectedRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/artItem/${params.id}`)
+                loader: ({ params }) => fetch(`https://art-and-craft-server-indol.vercel.app/artItem/${params.id}`)
             },
             {
                 path: "/updateArt/:id",
                 element: <ProtectedRoute>
                     <UpdateArt></UpdateArt>
                 </ProtectedRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/artItem/${params.id}`)
+                loader: ({ params }) => fetch(`https://art-and-craft-server-indol.vercel.app/artItem/${params.id}`)
             },
             {
                 path: "/add-craft-item",
