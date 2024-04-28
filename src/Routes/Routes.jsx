@@ -10,6 +10,7 @@ import MyArtAndCraft from "../Pages/MyArtAndCraft/MyArtAndCraft";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import DetailsItem from "../components/DetailsItem/DetailsItem";
 import UpdateArt from "../Pages/UpdateArt/UpdateArt";
+import ArtCraftCategory from "../components/ArtCraftCategory/ArtCraftCategory";
 
 
 
@@ -45,8 +46,8 @@ const router = createBrowserRouter([
             },
             {
                 path: "/artCategory/:subcategory_Name",
-                element: <UpdateArt></UpdateArt>,
-                loader: ({ params }) => fetch(`https://art-and-craft-server-indol.vercel.app/artItem/${params.id}`)
+                element: <ArtCraftCategory></ArtCraftCategory>,
+                loader: ({ params }) => fetch(`http://localhost:5000/artItem/${params.subcategory_Name}`)
             },
             {
                 path: "/add-craft-item",
