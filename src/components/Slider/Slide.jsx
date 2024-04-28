@@ -9,8 +9,6 @@ const Slide = () => {
 
     const data = useLoaderData()
 
-    console.log(data);
-
     return (
         <div className="mx-2 mt-6 lg:mt-10">
             <Swiper

@@ -40,7 +40,6 @@ const AddCraftItem = () => {
         const image_url = form.image.value;
 
         const addItemInfo = { item_name, subcategory_Name, short_description, price, rating, customization_example, processing_time, user_email, user_name, stock_status, image_url };
-        console.log(addItemInfo);
 
         fetch('http://localhost:5000/newItem', {
             method: "POST",

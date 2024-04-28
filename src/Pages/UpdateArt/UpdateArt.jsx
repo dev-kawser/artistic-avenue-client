@@ -55,7 +55,6 @@ const UpdateArt = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.modifiedCount > 0) {
-                    // window.location.reload();
                     Swal.fire({
                         title: 'Success!',
                         text: 'Data Updated Successfully',
