@@ -8,7 +8,7 @@ const MyArtAndCraft = () => {
     const [originalData, setOriginalData] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myArt/${user?.email}`)
+        fetch(`https://art-and-craft-server-indol.vercel.app/myArt/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setMyItem(data);
@@ -47,7 +47,12 @@ const MyArtAndCraft = () => {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 p-1 container mx-auto mt-10 gap-5">
-                {myItem.map(item => <MyCard key={item._id} item={item} />)}
+                {myItem.map(item => <MyCard
+                    myItem={myItem}
+                    setMyItem={setMyItem}
+                    key={item._id}
+                    item={item}
+                />)}
             </div>
         </>
     );

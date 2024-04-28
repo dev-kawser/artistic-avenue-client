@@ -4,7 +4,7 @@ import ArtCard from "./ArtCard";
 
 const ArtSection = () => {
     const artData = useLoaderData()
-    // console.log(artData);
+    const slicedArtData = artData.slice(0, 6);
 
     return (
         <div className="mt-20">
@@ -12,7 +12,7 @@ const ArtSection = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 p-1 container mx-auto mt-10 gap-5">
                 {
-                    artData.map((data) => <ArtCard key={data._id} data={data}></ArtCard>)
+                    slicedArtData.map((data) => <ArtCard key={data._id} data={data}></ArtCard>)
                 }
             </div>
         </div>

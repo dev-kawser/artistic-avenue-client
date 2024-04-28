@@ -44,7 +44,7 @@ const UpdateArt = () => {
 
         const updateItemInfo = { item_name, subcategory_Name, short_description, price, rating, customization_example, processing_time, user_email, user_name, stock_status, image_url };
 
-        fetch(`http://localhost:5000/newItem/${_id}`, {
+        fetch(`https://art-and-craft-server-indol.vercel.app/newItem/${_id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
-const MyCard = ({ item }) => {
+const MyCard = ({ item, myItem, setMyItem }) => {
 
 
     const { _id, item_name, price, rating, customization_example, stock_status, image_url } = item;
@@ -21,7 +21,7 @@ const MyCard = ({ item }) => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/artItem/${_id}`, {
+                fetch(`https://art-and-craft-server-indol.vercel.app/artItem/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
@@ -32,6 +32,8 @@ const MyCard = ({ item }) => {
                                 text: "Your Art Collection has been deleted.",
                                 icon: "success"
                             });
+                            const remaining = myItem.filter(tlk => tlk._id !== _id);
+                            setMyItem(remaining);
                         }
                     })
             }

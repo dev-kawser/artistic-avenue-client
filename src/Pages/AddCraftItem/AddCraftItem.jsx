@@ -41,7 +41,7 @@ const AddCraftItem = () => {
 
         const addItemInfo = { item_name, subcategory_Name, short_description, price, rating, customization_example, processing_time, user_email, user_name, stock_status, image_url };
 
-        fetch('http://localhost:5000/newItem', {
+        fetch('https://art-and-craft-server-indol.vercel.app/newItem', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -77,10 +77,7 @@ const AddCraftItem = () => {
                                 <label htmlFor="firstname" className="text-sm">Item Name</label>
                                 <input name="item" id="firstname" type="text" placeholder="Item Name" className="w-full text-black rounded-md focus:ring focus:ring-opacity-75  focus:ring-violet-600 border-gray-300 outline-slate-200 outline" />
                             </div>
-                            {/* <div className="col-span-full sm:col-span-3">
-                                <label htmlFor="lastname" className="text-sm">Subcategory Name</label>
-                                <input name="subcategory" id="lastname" type="text" placeholder="Subcategory Name" className="w-full text-black rounded-md focus:ring focus:ring-opacity-75  focus:ring-violet-600 border-gray-300 outline-slate-200 outline" />
-                            </div> */}
+
                             <div className="flex flex-col">
                                 <label htmlFor="state" className="text-sm">Subcategory</label>
                                 <select value={selectedSubUpdateOption} onChange={handleSubSelectChange} className="outline-slate-200 outline">
@@ -127,7 +124,7 @@ const AddCraftItem = () => {
                                 <label htmlFor="zip" className="text-sm">Processing Time</label>
                                 <input name="processing" id="zip" type="text" placeholder="Processing Time" className="w-full rounded-md focus:ring  focus:ring-opacity-75 text-black focus:ring-violet-600 border-gray-300 outline-slate-200 outline" />
                             </div>
-                            
+
                             <div className="flex flex-col">
                                 <label htmlFor="state" className="text-sm">Stock Status</label>
                                 <select value={selectedStockOption} onChange={handleStockSelectChange} className="outline-slate-200 outline">
