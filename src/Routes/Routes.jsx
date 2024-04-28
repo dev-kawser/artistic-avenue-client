@@ -22,7 +22,7 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch('/data.json'),
+                loader: () => fetch('http://localhost:5000/newItem')
             },
             {
                 path: "/all-art-craft",

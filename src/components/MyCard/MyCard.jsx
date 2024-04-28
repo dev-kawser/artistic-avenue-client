@@ -48,7 +48,7 @@ const MyCard = ({ item }) => {
                 <h2 className="card-title lg:flex hidden">Item Name: <span className="font-bold">{item_name}</span></h2>
                 <h2 className="card-title lg:hidden flex font-bold">{item_name}</h2>
                 <div className="flex lg:flex-row flex-col gap-3">
-                    <h4 className="font-medium">Price: <span className="text-red-600 font-bold">{price}</span></h4>
+                    <h4 className="font-medium">Price: <span className="text-red-600 font-bold">${price}</span></h4>
                     <h4 className="font-medium">Rating: <span className="text-yellow-500 font-bold">{rating}</span></h4>
                 </div>
                 <div>

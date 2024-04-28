@@ -1,69 +1,68 @@
 [
-    {
-      "image": "https://i.ibb.co/yPj2X3x/Landscape-Painting.jpg",
-      "item_name": "Landscape Painting",
-      "subcategory_Name": ["Mountain View Canvas", "Forest Based Landscape Painting"],
-      "short_description": "A beautiful depiction of natural scenery",
-      "price": 100,
-      "rating": 4.5,
-      "customization": "Yes",
-      "processing_time": "2-3 weeks",
-      "stockStatus": "Made to Order"
-    },
-    {
-      "image": "https://i.ibb.co/dr7LYSz/Portrait-Drawing.jpg",
-      "item_name": "Portrait Drawing",
-      "subcategory_Name": ["Pencil Sketch Portrait", "Ink Outline Portrait", "Acrylic Portrait Canvas"],
-      "short_description": "An exquisite portrait capturing likeness and emotion",
-      "price": 80,
-      "rating": 4.2,
-      "customization": "Yes",
-      "processing_time": "1-2 weeks",
-      "stockStatus": "Made to Order"
-    },
-    {
-      "image": "https://i.ibb.co/Yfq1mzr/Watercolour-Painting.jpg",
-      "item_name": "Watercolour Painting",
-      "subcategory_Name": ["Floral Watercolor Art", "Animal Watercolor Portrait"],
-      "short_description": "Vivid colors flowing seamlessly on paper",
-      "price": 120,
-      "rating": 4.8,
-      "customization": "No",
-      "processing_time": "1 week",
-      "stockStatus": "In stock"
-    },
-    {
-      "image": "https://i.ibb.co/2Fps0fM/Oil-Painting.jpg",
-      "item_name": "Oil Painting",
-      "subcategory_Name": ["Oil Portrait", "Abstract Oil Painting"],
-      "short_description": "Rich textures and deep colors in classic oil medium",
-      "price": 150,
-      "rating": 4.7,
-      "customization": "Yes",
-      "processing_time": "2-3 weeks",
-      "stockStatus": "Made to Order"
-    },
-    {
-      "image": "https://i.ibb.co/n7B1jrs/Charcoal-Sketching.jpg",
-      "item_name": "Charcoal Sketching",
-      "subcategory_Name": ["Figure Charcoal Sketch", "Architectural Charcoal Drawing"],
-      "short_description": "Bold strokes capturing light and shadow",
-      "price": 60,
-      "rating": 4.0,
-      "customization": "No",
-      "processing_time": "3-5 days",
-      "stockStatus": "In stock"
-    },
-    {
-      "image": "https://i.ibb.co/wNJr0SC/Cartoon-Drawing.jpg",
-      "item_name": "Cartoon Drawing",
-      "subcategory_Name": ["Comic Strip Drawing", "Superhero Cartoon Design"],
-      "short_description": "Whimsical characters brought to life on paper",
-      "price": 40,
-      "rating": 3.9,
-      "customization": "Yes",
-      "processing_time": "1 week",
-      "stockStatus": "In stock"
-    }
-  ]
-  
+  {
+    "image": "https://i.ibb.co/4RsG6X4/Mountain-View-Canvas.jpg",
+    "item_name": "Mountain View Canvas",
+    "subcategory_Name": "Landscape Painting",
+    "short_description": "A beautiful depiction of natural scenery",
+    "price": 100,
+    "rating": 4.5,
+    "customization": "Yes",
+    "processing_time": "2-3 weeks",
+    "stockStatus": "Made to Order"
+  },
+  {
+    "image": "https://i.ibb.co/dr7LYSz/Portrait-Drawing.jpg",
+    "item_name": "Pencil Sketch Portrait",
+    "subcategory_Name": "Portrait Drawing",
+    "short_description": "An exquisite portrait capturing likeness and emotion",
+    "price": 80,
+    "rating": 4.2,
+    "customization": "Yes",
+    "processing_time": "1-2 weeks",
+    "stockStatus": "Made to Order"
+  },
+  {
+    "image": "https://i.ibb.co/Yfq1mzr/Watercolour-Painting.jpg",
+    "item_name": "Floral Watercolor Art",
+    "subcategory_Name": "Watercolour Painting",
+    "short_description": "Vivid colors flowing seamlessly on paper",
+    "price": 120,
+    "rating": 4.8,
+    "customization": "No",
+    "processing_time": "1 week",
+    "stockStatus": "In stock"
+  },
+  {
+    "image": "https://i.ibb.co/2Fps0fM/Oil-Painting.jpg",
+    "item_name": "Realistic Oil Portrait",
+    "subcategory_Name": "Oil Painting",
+    "short_description": "Rich textures and deep colors in classic oil medium",
+    "price": 150,
+    "rating": 4.7,
+    "customization": "Yes",
+    "processing_time": "2-3 weeks",
+    "stockStatus": "Made to Order"
+  },
+  {
+    "image": "https://i.ibb.co/n7B1jrs/Charcoal-Sketching.jpg",
+    "item_name": "Figure Charcoal Sketch",
+    "subcategory_Name": "Charcoal Sketching",
+    "short_description": "Bold strokes capturing light and shadow",
+    "price": 60,
+    "rating": 4.0,
+    "customization": "No",
+    "processing_time": "3-5 days",
+    "stockStatus": "In stock"
+  },
+  {
+    "image": "https://i.ibb.co/wNJr0SC/Cartoon-Drawing.jpg",
+    "item_name": "Comic Strip Drawing",
+    "subcategory_Name": "Cartoon Drawing",
+    "short_description": "Whimsical characters brought to life on paper",
+    "price": 40,
+    "rating": 3.9,
+    "customization": "Yes",
+    "processing_time": "1 week",
+    "stockStatus": "In stock"
+  }
+]
