@@ -10,26 +10,36 @@ const UpdateArt = () => {
     const { user } = useContext(AuthContext);
     const updateArt = useLoaderData();
 
-    const [selectedOption, setSelectedOption] = useState('');
+    const [selectedCustomizationUpdateOption, setSelectedCustomizationUpdateOption] = useState('');
+    const [selectedStockOption, setSelectedStockOption] = useState('');
+    const [selectedSubUpdateOption, setSubcategoryOption] = useState('');
 
-    const handleSelectChange = (event) => {
-        setSelectedOption(event.target.value);
+    const handleCustomizationSelectChange = (event) => {
+        setSelectedCustomizationUpdateOption(event.target.value);
     };
 
-    const { item_name, subcategory_Name, short_description, price, rating, stock_status, image_url, processing_time, _id } = updateArt;
+    const handleStockSelectChange = (event) => {
+        setSelectedStockOption(event.target.value);
+    };
+
+    const handleSubSelectChange = (event) => {
+        setSubcategoryOption(event.target.value);
+    };
+
+    const { item_name, short_description, price, rating, image_url, processing_time, _id } = updateArt;
     const handleUpdateItem = e => {
         e.preventDefault();
         const form = e.target;
         const item_name = form.item.value;
-        const subcategory_Name = form.subcategory.value;
+        const subcategory_Name = selectedSubUpdateOption;
         const short_description = form.description.value;
         const price = form.price.value;
         const rating = form.rating.value;
-        const customization_example = selectedOption;
+        const customization_example = selectedCustomizationUpdateOption;
         const processing_time = form.processing.value;
         const user_name = user.displayName;
         const user_email = user.email;
-        const stock_status = form.stock.value;
+        const stock_status = selectedStockOption;
         const image_url = form.image.value;
 
         const updateItemInfo = { item_name, subcategory_Name, short_description, price, rating, customization_example, processing_time, user_email, user_name, stock_status, image_url };
@@ -44,7 +54,6 @@ const UpdateArt = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 if (data.modifiedCount > 0) {
                     // window.location.reload();
                     Swal.fire({
@@ -71,9 +80,17 @@ const UpdateArt = () => {
                                 <label htmlFor="firstname" className="text-sm">Item Name</label>
                                 <input name="item" id="firstname" type="text" defaultValue={item_name} className="w-full text-black rounded-md focus:ring focus:ring-opacity-75  focus:ring-violet-600 border-gray-300 outline-slate-200 outline" />
                             </div>
-                            <div className="col-span-full sm:col-span-3">
-                                <label htmlFor="lastname" className="text-sm">Subcategory Name</label>
-                                <input name="subcategory" id="lastname" type="text" defaultValue={subcategory_Name} className="w-full text-black rounded-md focus:ring focus:ring-opacity-75  focus:ring-violet-600 border-gray-300 outline-slate-200 outline" />
+                            <div className="flex flex-col">
+                                <label htmlFor="state" className="text-sm">Subcategory</label>
+                                <select value={selectedSubUpdateOption} onChange={handleSubSelectChange} className="outline-slate-200 outline">
+                                    <option value="" className="p-1">Select</option>
+                                    <option value="Landscape Painting" className="p-1">Landscape Painting</option>
+                                    <option value="Portrait Drawing" className="p-1">Portrait Drawing</option>
+                                    <option value="Watercolour Painting" className="p-1">Watercolour Painting</option>
+                                    <option value="Oil Painting" className="p-1">Oil Painting</option>
+                                    <option value="Charcoal Sketching" className="p-1">Charcoal Sketching</option>
+                                    <option value="Cartoon Drawing" className="p-1">Cartoon Drawing</option>
+                                </select>
                             </div>
                             <div className="col-span-full sm:col-span-3">
                                 <label htmlFor="email" className="text-sm">User Name</label>
@@ -98,7 +115,7 @@ const UpdateArt = () => {
 
                             <div className="flex flex-col">
                                 <label htmlFor="state" className="text-sm">Customization</label>
-                                <select value={selectedOption} onChange={handleSelectChange} className="outline-slate-200 outline">
+                                <select value={selectedCustomizationUpdateOption} onChange={handleCustomizationSelectChange} className="outline-slate-200 outline">
                                     <option value="" className="p-1">Select</option>
                                     <option value="yes" className="p-1">Yes</option>
                                     <option value="no" className="p-1">No</option>
@@ -109,9 +126,13 @@ const UpdateArt = () => {
                                 <label htmlFor="zip" className="text-sm">Processing Time</label>
                                 <input name="processing" id="zip" type="text" defaultValue={processing_time} className="w-full rounded-md focus:ring  focus:ring-opacity-75 text-black focus:ring-violet-600 border-gray-300 outline-slate-200 outline" />
                             </div>
-                            <div className="col-span-full sm:col-span-2">
-                                <label htmlFor="zip" className="text-sm">Stock Status</label>
-                                <input name="stock" id="zip" type="text" defaultValue={stock_status} className="w-full rounded-md focus:ring  focus:ring-opacity-75 text-black focus:ring-violet-600 border-gray-300 outline-slate-200 outline" />
+                            <div className="flex flex-col">
+                                <label htmlFor="state" className="text-sm">Stock Status</label>
+                                <select value={selectedStockOption} onChange={handleStockSelectChange} className="outline-slate-200 outline">
+                                    <option value="" className="p-1">Select</option>
+                                    <option value="in stock" className="p-1">In Stock</option>
+                                    <option value="out of stock" className="p-1">Out of stock</option>
+                                </select>
                             </div>
                             <div className="col-span-full sm:col-span-2">
                                 <label htmlFor="zip" className="text-sm">Image</label>

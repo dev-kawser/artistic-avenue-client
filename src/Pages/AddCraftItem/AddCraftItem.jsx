@@ -8,29 +8,39 @@ const AddCraftItem = () => {
 
     const { user } = useContext(AuthContext);
 
-    const [selectedOption, setSelectedOption] = useState('');
+    const [selectedCustomizationUpdateOption, setSelectedCustomizationUpdateOption] = useState('');
+    const [selectedStockOption, setSelectedStockOption] = useState('');
+    const [selectedSubUpdateOption, setSubcategoryOption] = useState('');
 
-    const handleSelectChange = (event) => {
-        setSelectedOption(event.target.value);
+    const handleCustomizationSelectChange = (event) => {
+        setSelectedCustomizationUpdateOption(event.target.value);
+    };
+
+    const handleStockSelectChange = (event) => {
+        setSelectedStockOption(event.target.value);
+    };
+
+    const handleSubSelectChange = (event) => {
+        setSubcategoryOption(event.target.value);
     };
 
     const handleAddItem = e => {
         e.preventDefault();
         const form = e.target;
         const item_name = form.item.value;
-        const subcategory_Name = form.subcategory.value;
+        const subcategory_Name = selectedSubUpdateOption;
         const short_description = form.description.value;
         const price = form.price.value;
         const rating = form.rating.value;
-        const customization_example = selectedOption;
+        const customization_example = selectedCustomizationUpdateOption;
         const processing_time = form.processing.value;
         const user_name = user.displayName;
         const user_email = user.email;
-        const stock_status = form.stock.value;
+        const stock_status = selectedStockOption;
         const image_url = form.image.value;
 
         const addItemInfo = { item_name, subcategory_Name, short_description, price, rating, customization_example, processing_time, user_email, user_name, stock_status, image_url };
-        console.log(customization_example);
+        console.log(addItemInfo);
 
         fetch('http://localhost:5000/newItem', {
             method: "POST",
@@ -61,16 +71,28 @@ const AddCraftItem = () => {
                 <form onSubmit={handleAddItem} noValidate="" action="" className="container flex flex-col mx-auto space-y-12">
                     <fieldset className="grid grid-cols-4 gap-6 p-10 rounded-md shadow-sm bg-gray-100">
                         <div className="space-y-2 col-span-full lg:col-span-1">
-                        <p className="font-medium text-gray-900 text-xl">Add Your Information</p>
+                            <p className="font-medium text-gray-900 text-xl">Add Your Information</p>
                         </div>
                         <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3 text-black">
                             <div className="col-span-full sm:col-span-3">
                                 <label htmlFor="firstname" className="text-sm">Item Name</label>
                                 <input name="item" id="firstname" type="text" placeholder="Item Name" className="w-full text-black rounded-md focus:ring focus:ring-opacity-75  focus:ring-violet-600 border-gray-300 outline-slate-200 outline" />
                             </div>
-                            <div className="col-span-full sm:col-span-3">
+                            {/* <div className="col-span-full sm:col-span-3">
                                 <label htmlFor="lastname" className="text-sm">Subcategory Name</label>
                                 <input name="subcategory" id="lastname" type="text" placeholder="Subcategory Name" className="w-full text-black rounded-md focus:ring focus:ring-opacity-75  focus:ring-violet-600 border-gray-300 outline-slate-200 outline" />
+                            </div> */}
+                            <div className="flex flex-col">
+                                <label htmlFor="state" className="text-sm">Subcategory</label>
+                                <select value={selectedSubUpdateOption} onChange={handleSubSelectChange} className="outline-slate-200 outline">
+                                    <option value="" className="p-1">Select</option>
+                                    <option value="Landscape Painting" className="p-1">Landscape Painting</option>
+                                    <option value="Portrait Drawing" className="p-1">Portrait Drawing</option>
+                                    <option value="Watercolour Painting" className="p-1">Watercolour Painting</option>
+                                    <option value="Oil Painting" className="p-1">Oil Painting</option>
+                                    <option value="Charcoal Sketching" className="p-1">Charcoal Sketching</option>
+                                    <option value="Cartoon Drawing" className="p-1">Cartoon Drawing</option>
+                                </select>
                             </div>
                             <div className="col-span-full sm:col-span-3">
                                 <label htmlFor="email" className="text-sm">User Name</label>
@@ -95,7 +117,7 @@ const AddCraftItem = () => {
 
                             <div className="flex flex-col">
                                 <label htmlFor="state" className="text-sm">Customization</label>
-                                <select value={selectedOption} onChange={handleSelectChange} className="outline-slate-200 outline">
+                                <select value={selectedCustomizationUpdateOption} onChange={handleCustomizationSelectChange} className="outline-slate-200 outline">
                                     <option value="" className="p-1">Select</option>
                                     <option value="yes" className="p-1">Yes</option>
                                     <option value="no" className="p-1">No</option>
@@ -106,10 +128,16 @@ const AddCraftItem = () => {
                                 <label htmlFor="zip" className="text-sm">Processing Time</label>
                                 <input name="processing" id="zip" type="text" placeholder="Processing Time" className="w-full rounded-md focus:ring  focus:ring-opacity-75 text-black focus:ring-violet-600 border-gray-300 outline-slate-200 outline" />
                             </div>
-                            <div className="col-span-full sm:col-span-2">
-                                <label htmlFor="zip" className="text-sm">Stock Status</label>
-                                <input name="stock" id="zip" type="text" placeholder="In stock/ Out of stock" className="w-full rounded-md focus:ring  focus:ring-opacity-75 text-black focus:ring-violet-600 border-gray-300 outline-slate-200 outline" />
+                            
+                            <div className="flex flex-col">
+                                <label htmlFor="state" className="text-sm">Stock Status</label>
+                                <select value={selectedStockOption} onChange={handleStockSelectChange} className="outline-slate-200 outline">
+                                    <option value="" className="p-1">Select</option>
+                                    <option value="in stock" className="p-1">In Stock</option>
+                                    <option value="out of stock" className="p-1">Out of stock</option>
+                                </select>
                             </div>
+
                             <div className="col-span-full sm:col-span-2">
                                 <label htmlFor="zip" className="text-sm">Image</label>
                                 <input name="image" id="zip" type="url" placeholder="Image url" className="w-full rounded-md focus:ring  focus:ring-opacity-75 text-black focus:ring-violet-600 border-gray-300 outline-slate-200 outline" />
