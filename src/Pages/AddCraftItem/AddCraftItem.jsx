@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../Context/ContextProvider";
 import { FaArrowRight } from "react-icons/fa6";
 import Swal from 'sweetalert2'
+import { Typewriter } from "react-simple-typewriter";
 
 
 const AddCraftItem = () => {
@@ -70,7 +71,27 @@ const AddCraftItem = () => {
                 <form onSubmit={handleAddItem} noValidate="" action="" className="container flex flex-col mx-auto space-y-12">
                     <fieldset className="grid grid-cols-4 gap-6 p-10 rounded-md shadow-sm bg-gray-100">
                         <div className="space-y-2 col-span-full lg:col-span-1">
-                            <p className="font-medium text-gray-900 text-xl">Add Your Information</p>
+                            <div className=" text-3xl">
+
+
+                                <h1 style={{ paddingTop: '5rem', margin: 'auto 0', fontWeight: 'normal' }}>
+                                    Add Your{' '}
+                                    <span style={{ color: 'red', fontWeight: 'bold' }}>
+                                        {/* Style will be inherited from the parent element */}
+                                        <Typewriter
+                                            words={['Data']}
+                                            loop={50}
+                                            cursor
+                                            cursorStyle='_'
+                                            typeSpeed={70}
+                                            deleteSpeed={50}
+                                            delaySpeed={1000}
+                                        />
+                                    </span>
+                                </h1>
+
+
+                            </div>
                         </div>
                         <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3 text-black">
                             <div className="col-span-full sm:col-span-3">

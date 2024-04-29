@@ -11,8 +11,8 @@ const ArtCard = ({ data }) => {
     const { _id, item_name, price, rating, customization_example, stock_status, image_url } = data;
 
     return (
-        <div data-aos="zoom-in-down" className="card card-side bg-base-100 shadow-xl space-y-3">
-            <figure>
+        <div className="card card-side bg-base-100 shadow-xl space-y-3">
+            <figure data-aos="zoom-in-down">
                 <img className="w-[250px] h-[270px]" src={image_url} alt="loading" />
             </figure>
             <div className="card-body">

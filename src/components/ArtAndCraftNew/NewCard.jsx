@@ -9,8 +9,8 @@ const NewCard = ({ data }) => {
 
     return (
         <Link to={`/artCategory/${subcategory_Name}`} >
-            <div data-aos="flip-up" className="rounded-md p-1 shadow-md dark:bg-gray-50 dark:text-gray-800">
-                <img src={image} alt="" className="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500" />
+            <div className="rounded-md p-1 shadow-md dark:bg-gray-50 dark:text-gray-800">
+                <img data-aos="flip-up" src={image} alt="" className="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500" />
                 <div className="flex flex-col justify-between p-6 space-y-8">
                     <div className="space-y-2">
                         <h2 className="text-3xl font-semibold tracking-wide">{subcategory_Name}</h2>

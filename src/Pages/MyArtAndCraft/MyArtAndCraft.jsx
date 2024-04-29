@@ -31,7 +31,7 @@ const MyArtAndCraft = () => {
 
             <div className="flex justify-center items-center">
                 <details className="dropdown mt-10">
-                    <summary className="m-1 btn btn-outline px-10">Filter</summary>
+                    <summary className="m-1 btn btn-outline px-20">Filter</summary>
                     <ul className="p-2 block shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
                         <li>
                             <button onClick={handleAllData}>All</button>

@@ -3,6 +3,7 @@ import { FaArrowRight } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Context/ContextProvider";
 import Swal from "sweetalert2";
+import { Typewriter } from "react-simple-typewriter";
 
 
 const UpdateArt = () => {
@@ -30,7 +31,7 @@ const UpdateArt = () => {
 
     console.log(updateArt);
 
-    
+
     const handleUpdateItem = e => {
         e.preventDefault();
         const form = e.target;
@@ -75,8 +76,26 @@ const UpdateArt = () => {
             <section className="p-6 text-gray-900 mt-10">
                 <form onSubmit={handleUpdateItem} noValidate="" action="" className="container flex flex-col mx-auto space-y-12">
                     <fieldset className="grid grid-cols-4 gap-6 p-10 rounded-md shadow-sm bg-gray-100">
-                        <div className="space-y-2 col-span-full lg:col-span-1">
-                            <p className="font-medium text-gray-900 text-xl">Update Your Information</p>
+                        <div className=" text-3xl">
+
+
+                            <h1 style={{ paddingTop: '5rem', margin: 'auto 0', fontWeight: 'normal' }}>
+                                Update Your{' '}
+                                <span style={{ color: 'red', fontWeight: 'bold' }}>
+                                    {/* Style will be inherited from the parent element */}
+                                    <Typewriter
+                                        words={['Data']}
+                                        loop={50}
+                                        cursor
+                                        cursorStyle='_'
+                                        typeSpeed={70}
+                                        deleteSpeed={50}
+                                        delaySpeed={1000}
+                                    />
+                                </span>
+                            </h1>
+
+
                         </div>
                         <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3 text-black">
                             <div className="col-span-full sm:col-span-3">

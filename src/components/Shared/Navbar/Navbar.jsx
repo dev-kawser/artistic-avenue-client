@@ -40,7 +40,7 @@ const Navbar = () => {
                             {links}
                         </ul>
                     </div>
-                    <Link to="/" className="btn btn-ghost text-3xl text-[#0099FF]">daisyUI</Link>
+                    <Link to="/" className="btn btn-ghost text-3xl">Artistic Avenue</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu flex gap-1 menu-horizontal px-3 text-xl font-semibold text-black">
