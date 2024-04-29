@@ -4,6 +4,7 @@ import { Link, useLoaderData } from "react-router-dom";
 const DetailsItem = () => {
 
     const singleArt = useLoaderData();
+    
 
     const { item_name, subcategory_Name, short_description, price, rating, customization_example, processing_time, user_email, user_name, stock_status, image_url } = singleArt;
 

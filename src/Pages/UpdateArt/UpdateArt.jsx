@@ -27,6 +27,10 @@ const UpdateArt = () => {
     };
 
     const { item_name, short_description, price, rating, image_url, processing_time, _id } = updateArt;
+
+    console.log(updateArt);
+
+    
     const handleUpdateItem = e => {
         e.preventDefault();
         const form = e.target;

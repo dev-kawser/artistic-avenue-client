@@ -35,14 +35,14 @@ const router = createBrowserRouter([
                 element: <ProtectedRoute>
                     <DetailsItem></DetailsItem>
                 </ProtectedRoute>,
-                loader: ({ params }) => fetch(`https://art-and-craft-server-indol.vercel.app/artItem/${params.id}`)
+                loader: ({ params }) => fetch(`https://art-and-craft-server-indol.vercel.app/newItem/${params.id}`)
             },
             {
                 path: "/updateArt/:id",
                 element: <ProtectedRoute>
                     <UpdateArt></UpdateArt>
                 </ProtectedRoute>,
-                loader: ({ params }) => fetch(`https://art-and-craft-server-indol.vercel.app/artItem/${params.id}`)
+                loader: ({ params }) => fetch(`https://art-and-craft-server-indol.vercel.app/newItem/${params.id}`)
             },
             {
                 path: "/artCategory/:subcategory_Name",
