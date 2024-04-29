@@ -9,7 +9,7 @@ const ArtWork = () => {
                         Art is the journey of a free soul. - Alev Oguz</span>
                     <h2 className="text-5xl font-bold text-center fira-sans dark:text-gray-900">Our Popular Art Works</h2>
                     <div className="grid gap-6 my-16 lg:grid-cols-3">
-                        <div className="flex flex-col p-8 space-y-4 rounded-md dark:bg-gray-50">
+                        <div data-aos="flip-left" className="flex flex-col p-8 space-y-4 rounded-md dark:bg-gray-50">
                             <div>
                                 <img className="w-64 h-[270px] hover:scale-105 transition-all border border-black" src="https://i.ibb.co/p4VsYMc/Landscape-Painting.webp" alt="" />
                             </div>
@@ -18,7 +18,7 @@ const ArtWork = () => {
                                 Landscape painting portrays natural scenery, capturing its beauty and atmosphere through color, light, and texture.
                             </p>
                         </div>
-                        <div className="flex flex-col p-8 space-y-4 rounded-md dark:bg-gray-50">
+                        <div data-aos="flip-up" className="flex flex-col p-8 space-y-4 rounded-md dark:bg-gray-50">
                             <div>
                                 <img className="w-64 hover:scale-105 transition-all border border-black" src="https://i.ibb.co/Yt4BQ4c/Portrait-Drawing.jpg" alt="" />
                             </div>
@@ -26,7 +26,7 @@ const ArtWork = () => {
                                 <b>Portrait Drawing.</b>Portrait drawing captures the likeness and personality of individuals through skilled observation and rendering of facial features and expressions.
                             </p>
                         </div>
-                        <div className="flex flex-col p-8 space-y-4 rounded-md dark:bg-gray-50">
+                        <div data-aos="flip-right" className="flex flex-col p-8 space-y-4 rounded-md dark:bg-gray-50">
                             <div>
                                 <img className="w-64 hover:scale-105 transition-all border border-black" src="https://i.ibb.co/XjZ9NzX/Cartoon-Drawing.jpg" alt="" />
                             </div>

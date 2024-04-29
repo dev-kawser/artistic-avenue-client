@@ -7,7 +7,7 @@ const CategoryCard = ({ ac }) => {
 
     
     return (
-            <div className="card card-side bg-base-100 shadow-xl space-y-3">
+            <div data-aos="zoom-out-up" className="card card-side bg-base-100 shadow-xl space-y-3">
                 <figure>
                     <img className="w-[250px] h-[270px]" src={image_url} alt="loading" />
                 </figure>

@@ -1,6 +1,9 @@
 /* eslint-disable react/prop-types */
 
 import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 
 const ArtCard = ({ data }) => {
@@ -8,7 +11,7 @@ const ArtCard = ({ data }) => {
     const { _id, item_name, price, rating, customization_example, stock_status, image_url } = data;
 
     return (
-        <div className="card card-side bg-base-100 shadow-xl space-y-3">
+        <div data-aos="zoom-in-down" className="card card-side bg-base-100 shadow-xl space-y-3">
             <figure>
                 <img className="w-[250px] h-[270px]" src={image_url} alt="loading" />
             </figure>

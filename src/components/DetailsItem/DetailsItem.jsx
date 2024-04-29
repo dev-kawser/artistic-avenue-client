@@ -4,14 +4,14 @@ import { Link, useLoaderData } from "react-router-dom";
 const DetailsItem = () => {
 
     const singleArt = useLoaderData();
-    
+
 
     const { item_name, subcategory_Name, short_description, price, rating, customization_example, processing_time, user_email, user_name, stock_status, image_url } = singleArt;
 
     return (
         <div>
             <div className="flex p-7 rounded-md lg:flex-row bg-slate-100 mt-5 lg:mt-10 flex-col gap-12 container mx-auto ">
-                <div className="flex items-center justify-center">
+                <div data-aos="zoom-in-down" className="flex items-center justify-center">
                     <img className="lg:h-[600px] rounded-xl" src={image_url} alt="" />
                 </div>
                 <div>
@@ -35,9 +35,12 @@ const DetailsItem = () => {
                         <h3 className="border-4 p-1 rounded-md border-blue-500">{user_name}</h3>
                         <h3 className="border-4 p-1 rounded-md border-red-500">{user_email || "Email not fund"}</h3>
                     </div>
-                    <div className="mt-7">
+                    <div className="mt-7 flex flex-col gap-3">
+                        <Link to="/">
+                            <button className="btn btn-primary w-full">Go Home</button>
+                        </Link>
                         <Link to="/all-art-craft">
-                            <button className="btn btn-info w-full">Go Back</button>
+                            <button className="btn btn-secondary w-full">Go All Art Section</button>
                         </Link>
                     </div>
                 </div>
