@@ -1,10 +1,10 @@
 # Artistic Avenue
 
-## Live Site URL
-[Artistic Avenue](https://art-and-craft-cdc17.web.app/)
+## Live Site URL - [Artistic Avenue](https://art-and-craft-cdc17.web.app/)
 
-## Category
-Painting and Drawing
+
+## Category - Painting and Drawing
+
 
 ## About Artistic Avenue:
 - **Inspiring Creativity:** Dive into a world of artistic expression with Artistic Avenue, where creativity knows no bounds. Explore a diverse range of paintings and drawings crafted by talented artists from around the globe.
