@@ -17,7 +17,7 @@ const ArtAndCraftNew = () => {
 
     return (
         <>
-            <h2 className="lg:text-5xl text-3xl mt-20 font-bold text-center fira-sans dark:text-gray-900">Art &Craft Categories</h2>
+            <h2 className="lg:text-5xl text-3xl mt-20 font-bold text-center fira-sans dark:text-gray-700">Art &Craft Categories</h2>
             
             <div className="mt-10 grid lg:grid-cols-3 grid-cols-1 gap-8">
                 {

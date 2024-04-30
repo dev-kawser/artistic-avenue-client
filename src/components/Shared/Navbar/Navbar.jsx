@@ -29,7 +29,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="shadow-xl bg-white py-4 fira-sans">
+        <div className="shadow-xl bg-white py-2 lg:py-4 fira-sans">
             <div className="navbar bg-transparent container mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown z-10">
@@ -43,7 +43,7 @@ const Navbar = () => {
                     <Link to="/" className="btn btn-ghost text-3xl">Artistic Avenue</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu flex gap-1 menu-horizontal px-3 text-xl font-semibold text-black">
+                    <ul className="menu rounded-none flex gap-2 menu-horizontal px-3 text-xl font-semibold text-black">
                         {links}
                     </ul>
                 </div>

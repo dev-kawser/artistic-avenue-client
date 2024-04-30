@@ -7,10 +7,10 @@ import ArtAndCraft from "../Pages/Art And Craft/ArtAndCraft";
 import ProtectedRoute from "./ProtectedRoute/ProtectedRoute";
 import AddCraftItem from "../Pages/AddCraftItem/AddCraftItem";
 import MyArtAndCraft from "../Pages/MyArtAndCraft/MyArtAndCraft";
-import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import DetailsItem from "../components/DetailsItem/DetailsItem";
 import UpdateArt from "../Pages/UpdateArt/UpdateArt";
 import ArtCraftCategory from "../components/ArtCraftCategory/ArtCraftCategory";
+import Error from "../Pages/ErrorPage/Error";
 
 
 
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
     {
         path: "/",
         element: <Root></Root>,
-        errorElement: <ErrorPage></ErrorPage>,
+        errorElement: <Error></Error>,
         children: [
             {
                 path: "/",
